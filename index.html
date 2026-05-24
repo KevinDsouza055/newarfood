@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PlateAR — See your food before you order. WebAR food visualization for restaurants and cafes." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>PlateAR — Scan. See. Order.</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- Ambient background glow effects -->
+  <div class="ambient-glow top-right"></div>
+  <div class="ambient-glow bottom-left"></div>
+
+  <!-- ===== SITE HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="./index.html" class="logo">
+        <span class="logo-name">PlateAR</span>
+        <span class="logo-tagline">Augmented Dining</span>
+      </a>
+      <nav class="header-nav">
+        <div class="nav-badge">AR Ready</div>
+        <a href="./qr.html" class="nav-qr-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="3" height="3"/>
+          </svg>
+          <span>QR Codes</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero fade-in">
+    <div class="hero-eyebrow">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+        <circle cx="12" cy="12" r="10"/>
+      </svg>
+      No App Required · Works in Any Browser
+    </div>
+
+    <h1 class="hero-title">
+      See Your <span>Food</span><br />Before You Order
+    </h1>
+
+    <p class="hero-subtitle">
+      Point your phone at the table, tap a dish — watch it appear in real life.
+      WebAR food visualization for modern food businesses.
+    </p>
+
+    <hr class="hero-divider" />
+  </section>
+
+  <!-- ===== DISHES SECTION ===== -->
+  <main class="dishes-section">
+    <div class="container">
+      <div class="section-label">Our Menu — 3 Dishes</div>
+
+      <div class="dishes-grid">
+
+        <!-- ===================================================
+             DISH 1 — Chocolate Brownie
+             To add a real photo: replace the emoji block inside
+             .dish-card__image-wrap with an <img> tag.
+             ===================================================  -->
+        <article class="dish-card">
+          <div class="dish-card__image-wrap">
+            <!-- PLACEHOLDER: Replace with actual dish photo -->
+            <div class="dish-card__emoji">🍫</div>
+            <div class="dish-card__image-overlay"></div>
+            <span class="dish-card__ar-badge">AR</span>
+          </div>
+          <div class="dish-card__body">
+            <p class="dish-card__category">Dessert</p>
+            <h2 class="dish-card__name">Chocolate Brownie</h2>
+            <p class="dish-card__desc">
+              Rich dark chocolate brownie with vanilla ice cream, drizzled with
+              warm chocolate ganache and a dusting of cocoa powder.
+            </p>
+            <div class="dish-card__footer">
+              <div class="dish-card__price">₹180 <span>incl. tax</span></div>
+              <a href="./dish1.html" class="btn-ar">
+                <!-- AR Cube Icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
+                View in AR
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================
+             DISH 2 — Cold Coffee
+             ===================================================  -->
+        <article class="dish-card">
+          <div class="dish-card__image-wrap">
+            <!-- PLACEHOLDER: Replace with actual dish photo -->
+            <div class="dish-card__emoji">☕</div>
+            <div class="dish-card__image-overlay"></div>
+            <span class="dish-card__ar-badge">AR</span>
+          </div>
+          <div class="dish-card__body">
+            <p class="dish-card__category">Beverages</p>
+            <h2 class="dish-card__name">Cold Coffee</h2>
+            <p class="dish-card__desc">
+              Creamy blended cold coffee with whipped cream, topped with
+              chocolate shavings and a drizzle of caramel sauce.
+            </p>
+            <div class="dish-card__footer">
+              <div class="dish-card__price">₹140 <span>incl. tax</span></div>
+              <a href="./dish2.html" class="btn-ar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
+                View in AR
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================
+             DISH 3 — Veg Club Sandwich
+             ===================================================  -->
+        <article class="dish-card">
+          <div class="dish-card__image-wrap">
+            <!-- PLACEHOLDER: Replace with actual dish photo -->
+            <div class="dish-card__emoji">🥪</div>
+            <div class="dish-card__image-overlay"></div>
+            <span class="dish-card__ar-badge">AR</span>
+          </div>
+          <div class="dish-card__body">
+            <p class="dish-card__category">Snacks</p>
+            <h2 class="dish-card__name">Veg Club Sandwich</h2>
+            <p class="dish-card__desc">
+              Triple layered sandwich packed with fresh veggies, melted cheese,
+              and house mayo — served with golden french fries.
+            </p>
+            <div class="dish-card__footer">
+              <div class="dish-card__price">₹160 <span>incl. tax</span></div>
+              <a href="./dish3.html" class="btn-ar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
+                View in AR
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- end dishes-grid -->
+    </div><!-- end container -->
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <p class="footer-logo">PlateAR</p>
+    <p class="footer-text">Powered by WebXR · Google Model Viewer · No App Required</p>
+    <div class="footer-links">
+      <a href="./index.html">Menu</a>
+      <a href="./qr.html">QR Codes</a>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="View Cold Coffee in AR — PlateAR" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Cold Coffee — PlateAR AR View</title>
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Google Model Viewer CDN (required for WebAR) -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body class="ar-page">
+
+  <!-- ===== AR TOP HEADER ===== -->
+  <header class="ar-header">
+    <a href="./index.html" class="btn-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      Menu
+    </a>
+
+    <span class="ar-header-title">Cold Coffee</span>
+    <span class="ar-header-price">₹140</span>
+  </header>
+
+  <!-- ===== MODEL VIEWER WRAP ===== -->
+  <div class="model-wrap">
+
+    <!--
+      =====================================================
+      MODEL VIEWER — 3D AR Component
+      =====================================================
+      HOW TO REPLACE THE PLACEHOLDER WITH YOUR REAL MODEL:
+
+      1. Export your Polycam scan as a GLB file.
+      2. Rename it to: dish2.glb
+      3. Place dish2.glb in the same folder as this file.
+      4. Change the `src` attribute below from:
+            src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+         to:
+            src="./dish2.glb"
+      5. For iOS AR (Quick Look), also export a USDZ from Polycam
+         and add:  ios-src="./dish2.usdz"
+
+      That's it! Everything else stays the same.
+      =====================================================
+    -->
+    <model-viewer
+      id="dish-model"
+      alt="3D model of Cold Coffee with whipped cream"
+
+      src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+
+
+
+
+      ar
+      ar-modes="scene-viewer webxr quick-look"
+      ar-scale="fixed"
+
+      camera-controls
+      auto-rotate
+      auto-rotate-delay="500"
+      rotation-per-second="15deg"
+
+      shadow-intensity="1"
+      shadow-softness="0.8"
+      environment-image="neutral"
+      exposure="1"
+
+      loading="eager"
+      reveal="auto"
+
+      style="width:100%; display:block;"
+    >
+
+      <!-- Custom AR activation button (shown inside model-viewer) -->
+      <button slot="ar-button" class="ar-button-custom">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+          <line x1="12" y1="22.08" x2="12" y2="12"/>
+        </svg>
+        View on Your Table
+      </button>
+
+    </model-viewer>
+
+    <!-- ===== DISH INFO + INSTRUCTIONS PANEL ===== -->
+    <div class="ar-info-panel">
+
+      <h1 class="ar-dish-name">Cold Coffee</h1>
+      <p class="ar-dish-desc">Creamy blended cold coffee with whipped cream &amp; chocolate shavings</p>
+
+      <div class="ar-instructions">
+        <div class="ar-instruction-step">
+          <span class="step-num">1</span>
+          <span>Tap <strong style="color:var(--gold)">View on Your Table</strong> above to launch AR mode.</span>
+        </div>
+        <div class="ar-instruction-step">
+          <span class="step-num">2</span>
+          <span>Move your phone slowly to detect a flat surface — like your table or counter.</span>
+        </div>
+        <div class="ar-instruction-step">
+          <span class="step-num">3</span>
+          <span>Tap anywhere on the surface to place the dish in your real space.</span>
+        </div>
+        <div class="ar-instruction-step">
+          <span class="step-num">4</span>
+          <span>Pinch to resize or drag to reposition the dish wherever you like.</span>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- end model-wrap -->
+
+  <script src="./script.js"></script>
+</body>
+</html>
